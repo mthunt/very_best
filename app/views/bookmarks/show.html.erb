@@ -9,13 +9,31 @@
       <dd><%= @bookmark.notes %></dd>
 
       <dt>User</dt>
-      <dd><%= @bookmark.user_id %></dd>
+      <dd>
+        <% if @bookmark.user.present? %>
+          <a href="/users/<%= @bookmark.user_id %>">
+            <%= @bookmark.user.bookmark_id %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Venue</dt>
-      <dd><%= @bookmark.venue_id %></dd>
+      <dd>
+        <% if @bookmark.venue.present? %>
+          <a href="/venues/<%= @bookmark.venue_id %>">
+            <%= @bookmark.venue.location %>
+          </a>
+        <% end %>
+      </dd>
 
       <dt>Dish</dt>
-      <dd><%= @bookmark.dish_id %></dd>
+      <dd>
+        <% if @bookmark.dish.present? %>
+          <a href="/dishes/<%= @bookmark.dish_id %>">
+            <%= @bookmark.dish.cuisine_id %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
