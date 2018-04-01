@@ -21,7 +21,7 @@
         <td><%= bookmark.notes %></td>
         <td><%= bookmark.user.bookmark_id %></td>
         <td><%= bookmark.venue.location %></td>
-        <td><%= bookmark.dish_id %></td>
+        <td><%= bookmark.dish.cuisine_id %></td>
         <td>
           <a href="/bookmarks/<%= bookmark.id %>" class="btn btn-primary">Show</a>
           <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">Edit</a>
